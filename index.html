@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>B99 Monty Hall Game</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<!-- Popup Ad -->
+		<div id="popup-ad" class="lightbox">
+			<div class="popup-content">
+				<button id="close-popup" class="close-button">&times;</button>
+				<h2>Welcome to the Monty Hall Game!</h2>
+				<p>
+					The Monty Hall problem is a fun probability puzzle. Choose one of the three doors to find the prize.
+					After you choose, one of the other doors without a prize will be revealed. You’ll then have the chance to stick with your choice or switch.
+					Will you win the prize? Let’s find out!
+					<br />
+					<br />
+					<img src="amy-doors-3.png" alt="Girl in a jacket" width="520" />
+				</p>
+			</div>
+		</div>
+		<!-- Speaker Button -->
+		<div class="speaker-button">
+			<i id="speaker-icon" class="fa-solid fa-volume-high"></i>
+		</div>
+		<!-- Main Game Container -->
+		<div class="content-container">
+		<div class="score-text"><span style="color:#cc0000">0 W</span><span style="color: #000;">&nbsp; | &nbsp;</span><span style="color:#0077cc">0 L</span></div>
+		<div class="win-percentage-text">00%</div>
+			<div class="game-container">
+				
+				<h1>Monty Hall Problem</h1>
+				<p id="instructions">Choose a door to find the prize!</p>
+				<div class="doors">
+					<div class="door-frame" id="door1" data-door="1">
+						<div class="door-panel">
+							<div class="door-label">1</div>
+						</div>
+						<div class="door-reveal"></div>
+					</div>
+					<div class="door-frame" id="door2" data-door="2">
+						<div class="door-panel">
+							<div class="door-label">2</div>
+						</div>
+						<div class="door-reveal"></div>
+					</div>
+					<div class="door-frame" id="door3" data-door="3">
+						<div class="door-panel">
+							<div class="door-label">3</div>
+						</div>
+						<div class="door-reveal"></div>
+					</div>
+				</div>
+				<button id="restart">Restart Game</button>
+				<button id="clear-history">Clear History</button>
+				<table id="history-table">
+					<thead>
+						<tr>
+							<th colspan="6" class="table-title">Results</th>
+						</tr>
+						<tr>
+							<th>#</th>
+							<th>Date & Time</th>
+							<th>Game Result</th>
+							<th>Chosen Door</th>
+							<th>Winning Door</th>
+							<th>Switched?</th>
+						</tr>
+					</thead>
+					<tbody id="history-body"></tbody>
+				</table>
+			</div>
+		</div>
+		<!-- Background Music -->
+		<audio id="bg-music" src="music.mp3" loop autoplay></audio>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+		<script src="scripts.js" defer></script>
+	</body>
+</html>
