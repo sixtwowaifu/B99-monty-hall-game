@@ -79,7 +79,14 @@ $(document).ready(function () {
 			rowClass
 		);
 		finalPhase = false;
+
+		// Add a 2-second delay before resetting the game
+		setTimeout(() => {
+			initializeGame();
+			$('#instructions').text('Make your first choice.'); // Reset the instructions
+		}, 2500);
 	}
+
 
 	// Update the history table with game details
 	function updateHistory(gameNumber, dateTime, result, chosen, prize, switchOrStay, rowClass) {
@@ -212,7 +219,7 @@ $(document).ready(function () {
 
 		// Update the score text dynamically with styles
 		$('.score-text').html(
-			`<span style="color: #cc0000; font-weight: bold;">${wins} W</span><span style="color: black; font-weight: bold;">&nbsp; | &nbsp;</span><span style="color: #0077cc; font-weight: bold;">${losses} L</span>`
+			`<span style="color: #cc0000; font-weight: bold;">${wins}W</span><span style="color: black; font-weight: bold;">&nbsp;|&nbsp;</span><span style="color: #0077cc; font-weight: bold;">${losses}L</span>`
 		);
 
 		// Update the win percentage text dynamically

@@ -245,21 +245,32 @@ button:hover {
 }
 
 .close-button {
-	background: none;
-	border: none;
-	font-size: 24px;
-	color: #333;
-	cursor: pointer;
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	font-weight: bold;
+  position: absolute;
+  bottom: 15px; /* 15px from the bottom edge */
+  left: 50%; /* Horizontally centered */
+  transform: translateX(-50%); /* Center align horizontally */
+  width: 50px; /* Circular size */
+  height: 50px;
+  background-color: #ffffff; /* White background */
+  border: 2px solid #000000; /* Black border, like door numbers */
+  border-radius: 50%; /* Make it a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333; /* Dark gray X */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow */
+  z-index: 10;
 }
 
 .close-button:hover {
-	color: #ff0000;
-	/* Optional hover effect */
+  background-color: #000; /* Red background on hover */
+  color: #ffffff; /* White X on hover */
+  border-color: #000; /* Red border on hover */
 }
+
 
 .score-text {
 	display: flex;
@@ -269,7 +280,7 @@ button:hover {
 	font-size: 50px;
 	font-weight: bold;
 	color: #cc0000;
-	font-family: 'Bangers', sans-serif;
+	font-family: Arial;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 	padding: 5px 10px;
 	border-radius: 5px;
